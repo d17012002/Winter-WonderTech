@@ -1,207 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bit By Bit: Events</title>
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bit By Bit: Events</title>
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
 
-  <body>
-    <style>
-      #snow {
-        background-color: rgba(0, 0, 0, 0.05);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        pointer-events: none;
-        z-index: 1000;
-      }
-    </style>
-    <div id="snow"></div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
-        script.onload = function () {
-          particlesJS("snow", {
-            "particles": {
-              "number": {
-                "value": 200,
-                "density": {
-                  "enable": true,
-                  "value_area": 600
-                }
-              },
-              "color": {
-                "value": "#fff"
-              },
-              "opacity": {
-                "value": 1,
-                "random": false,
-                "anim": {
-                  "enable": false
-                }
-              },
-              "size": {
-                "value": 4,
-                "random": true,
-                "anim": {
-                  "enable": false
-                }
-              },
-              "line_linked": {
+<body>
+  <style>
+    #snow {
+      background-color: rgba(0, 0, 0, 0.05);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 1000;
+    }
+  </style>
+  <!-- <div id="snow"></div> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+      script.onload = function () {
+        particlesJS("snow", {
+          "particles": {
+            "number": {
+              "value": 200,
+              "density": {
+                "enable": true,
+                "value_area": 600
+              }
+            },
+            "color": {
+              "value": "#fff"
+            },
+            "opacity": {
+              "value": 1,
+              "random": false,
+              "anim": {
+                "enable": false
+              }
+            },
+            "size": {
+              "value": 4,
+              "random": true,
+              "anim": {
+                "enable": false
+              }
+            },
+            "line_linked": {
+              "enable": false
+            },
+            "move": {
+              "enable": true,
+              "speed": 5,
+              "direction": "bottom",
+              "random": true,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": true,
+                "rotateX": 300,
+                "rotateY": 1200
+              }
+            }
+          },
+          "interactivity": {
+            "events": {
+              "onhover": {
                 "enable": false
               },
-              "move": {
-                "enable": true,
-                "speed": 5,
-                "direction": "bottom",
-                "random": true,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                  "enable": true,
-                  "rotateX": 300,
-                  "rotateY": 1200
-                }
-              }
-            },
-            "interactivity": {
-              "events": {
-                "onhover": {
-                  "enable": false
-                },
-                "onclick": {
-                  "enable": false
-                },
-                "resize": false
-              }
-            },
-            "retina_detect": true
-          });
-        }
-        document.head.append(script);
-      });
-    </script>
-    <!-- Header -->
-    <header
-      class="w3-container w3-center header-section cus-div"
-      id="skew1"
-      style="padding: 100px 16px"
-    >
-      <class class="head-img">
-        <img
-          id="header-img"
-          src="https://www.animatedimages.org/data/media/359/animated-santa-claus-image-0420.gif"
-          alt=""
-        />
-      </class>
-      <h1 style="color: white" class="w3-margin w3-xxxlarge">
-        Winter WonderTech
-      </h1>
-      <p style="color: white" class="w3-xlarge">
-        Attend the Most Awaited Winter Workshop: 21<sup>st</sup> - 24<sup
-          >th</sup
-        >
-        December
-      </p>
-      <br /><br />
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfEIArlR7iRUM_W_p2RHUoCe_sECctfMC5IbK4PTd0GIJTwUA/viewform"
-        ><button class="btn btn-lg btn-outline-light">Register Now!</button></a
-      >
-    </header>
+              "onclick": {
+                "enable": false
+              },
+              "resize": false
+            }
+          },
+          "retina_detect": true
+        });
+      }
+      document.head.append(script);
+    });
+  </script>
+  <!-- Header -->
+  <header class="w3-container w3-center header-section cus-div" id="skew1" style="padding: 100px 16px">
+    <class class="head-img">
+      <img id="header-img" src="https://www.animatedimages.org/data/media/359/animated-santa-claus-image-0420.gif"
+        alt="" />
+    </class>
+    <h1 style="color: white" class="w3-margin w3-xxxlarge">
+      Winter WonderTech
+    </h1>
+    <p style="color: white" class="w3-xlarge">
+      Attend the Most Awaited Winter Workshop: 21<sup>st</sup> - 24<sup>th</sup>
+      December
+    </p>
+    <br /><br />
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEIArlR7iRUM_W_p2RHUoCe_sECctfMC5IbK4PTd0GIJTwUA/viewform"><button
+        class="btn btn-lg btn-outline-light">Register Now!</button></a>
+  </header>
 
-    <!-- about -->
+  <!-- about -->
 
-    <div class="w3-row-padding w3-padding-64 w3-container">
-      <div class="w3-content">
-        <div class="w3-twothird">
-          <h2 class="row-title">
-            About Workshop
-          </h2>
-          <h5 class="w3-padding-32">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident.
-          </h5>
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h2 class="row-title">
+          About Workshop
+        </h2>
+        <h5 class="w3-padding-32">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </h5>
 
-          <h5 class="w3-text-grey">
-            Posuere sollicitudin aliquam ultrices sagittis orci. Neque viverra
-            justo nec ultrices. Odio facilisis mauris sit amet massa vitae
-            tortor. At volutpat diam ut venenatis tellus in metus. Egestas
-            tellus rutrum tellus pellentesque. Donec et odio pellentesque diam
-            volutpat commodo sed egestas.
-          </h5>
-        </div>
-        <div class="w3-third w3-center">
-          <br />
-          <img class="ml-5" width="320px" src="img/mascot.jpeg" alt="img" />
-        </div>
+        <h5 class="w3-text-grey">
+          Posuere sollicitudin aliquam ultrices sagittis orci. Neque viverra
+          justo nec ultrices. Odio facilisis mauris sit amet massa vitae
+          tortor. At volutpat diam ut venenatis tellus in metus. Egestas
+          tellus rutrum tellus pellentesque. Donec et odio pellentesque diam
+          volutpat commodo sed egestas.
+        </h5>
+      </div>
+      <div class="w3-third w3-center">
+        <br />
+        <img class="ml-5" width="320px" src="img/mascot.jpeg" alt="img" />
       </div>
     </div>
-  
-    <!-- Perks of the event -->
-    <div class="w3-container perks"><br>
-      <h2 id="schedule-heading" class="row-title">
-        Perks of the Event
-      </h2>
-      
-      <div class="row me-row content-ct">
-        <br>
-        <div class="col-md-4 col-sm-6 col-md-offset-2">
-          <h3>Knowledge</h3>
-          <p>In a world driven by technology, creative and interactive websites are the doors
-            through which one expresses their distinctive skills to the people of the world.
-            It is only through the knowledge of HTML and CSS that one can achieve the peak of uniqueness
-            in their websites.</p>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <h3>Fun & Entertaining</h3>
-          <p>The event spanned over the weekend is packed with fun games, fascinating quizzes, and
-            informative sessions. The “Bit By Bit” coding club brings a great learning experience for
-            aspiring web developers as we unveil the HTML and CSS Workshop event.</p>
-          <br><br>
-        </div>
+  </div>
+
+  <!-- Perks of the event -->
+  <div class="w3-container perks"><br>
+    <h2 id="schedule-heading" class="row-title text-center">
+      Perks of the Event
+    </h2>
+
+    <div class="row me-row content-ct mx-auto">
+      <br>
+      <div class="col-md-6 col-sm-6 ">
+        <h3>Knowledge</h3>
+        <p>In a world driven by technology, creative and interactive websites are the doors
+          through which one expresses their distinctive skills to the people of the world.
+          It is only through the knowledge of HTML and CSS that one can achieve the peak of uniqueness
+          in their websites.</p>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <h3>Fun & Entertaining</h3>
+        <p>The event spanned over the weekend is packed with fun games, fascinating quizzes, and
+          informative sessions. The “Bit By Bit” coding club brings a great learning experience for
+          aspiring web developers as we unveil the HTML and CSS Workshop event.</p>
+        <br><br>
       </div>
     </div>
+  </div>
 
-    <!-- Start: Speakers -->
-    <div class="w3-container"><br><br>
-      <h2 id="schedule-heading" class="row-title">
-        About Speakers
-      </h2>
+  <!-- Start: Speakers -->
+  <div class="w3-container"><br><br>
+    <h2 id="schedule-heading" class="row-title text-center">
+      About Speakers
+    </h2>
     <div class="row content-ct speaker">
-      <div class="col-md-4 col-sm-6 feature">
+      <div class="col-md-3"></div>
+      <div class="col-md-3 col-sm-12 feature">
         <img src="img/speaker-2.png" class="speaker-img" />
         <h3>Speaker Name</h3>
         <p>
@@ -212,14 +192,12 @@
         </p>
         <ul class="speaker-social">
           <li>
-            <a href="https://www.linkedin.com/in/shubham-singhal01"
-              ><span class="ti-linkedin"></span
-            ></a>
+            <a href="https://www.linkedin.com/in/shubham-singhal01"><span class="ti-linkedin"></span></a>
           </li>
         </ul>
       </div>
 
-      <div class="col-md-4 col-sm-6 feature">
+      <div class="col-md-3 col-sm-12 feature">
         <img src="img/speaker-1.png" class="speaker-img" />
         <h3>Speaker Name</h3>
         <div>
@@ -232,347 +210,284 @@
         </div>
         <ul class="speaker-social">
           <li>
-            <a href="https://www.linkedin.com/in/shubham-singhal01"
-              ><span class="ti-linkedin"></span
-            ></a>
+            <a href="https://www.linkedin.com/in/shubham-singhal01"><span class="ti-linkedin"></span></a>
           </li>
         </ul>
       </div>
     </div>
   </div>
 
-    <!-- Start: Schedule -->
-    <div class="container">
-      <div class="row me-row schedule" id="schedule">
-        <h2 id="schedule-heading" class="row-title content-ct">
-          Event Schedule
-        </h2>
-        <br /><br />
-        <div class="col-md-12">
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item" role="presentation">
-              <a
-                class="nav-link active"
-                style="margin-right: 12px"
-                href="#day-1"
-                aria-controls="home"
-                role="tab"
-                data-toggle="tab"
-              >
-                Day 01 <small>(21<sup>st</sup>, December)</small>
-              </a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a
-                class="nav-link"
-                href="#day-2"
-                aria-controls="profile"
-                role="tab"
-                data-toggle="tab"
-              >
-                Day 02 <small>(22<sup>nd</sup>, December)</small>
-              </a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a
-                class="nav-link"
-                href="#day-3"
-                aria-controls="profile"
-                role="tab"
-                data-toggle="tab"
-              >
-                Day 03 <small>(23<sup>rd</sup>, December)</small>
-              </a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a
-                class="nav-link"
-                href="#day-4"
-                aria-controls="profile"
-                role="tab"
-                data-toggle="tab"
-              >
-                Day 04 <small>(24<sup>th</sup>, December)</small>
-              </a>
-            </li>
-          </ul>
+  <!-- Start: Schedule -->
+  <div class="container">
+    <div class="row schedule" id="schedule">
+      <h2 id="schedule-heading" class="row-title content-ct">
+        Event Schedule
+      </h2>
+      <br /><br />
+      <div class="col-md-12">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" style="margin-right: 12px" href="#day-1" aria-controls="home" role="tab"
+              data-toggle="tab">
+              Day 01 <small>(21<sup>st</sup>, December)</small>
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" href="#day-2" aria-controls="profile" role="tab" data-toggle="tab">
+              Day 02 <small>(22<sup>nd</sup>, December)</small>
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" href="#day-3" aria-controls="profile" role="tab" data-toggle="tab">
+              Day 03 <small>(23<sup>rd</sup>, December)</small>
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" href="#day-4" aria-controls="profile" role="tab" data-toggle="tab">
+              Day 04 <small>(24<sup>th</sup>, December)</small>
+            </a>
+          </li>
+        </ul>
 
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div
-              role="tabpanel"
-              class="tab-pane fade in active show"
-              id="day-1"
-            >
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img
-                          class="media-object"
-                          src="img/intro.png"
-                          alt="..."
-                        />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">04:00pm to 04:30pm</h4>
-                      <h5>INTRODUCTION TO THE SPEAKERS</h5>
-                      <p style="width: 90%">
-                        All the dedicated speakers and honourable guest will be
-                        introduced before the HTML & CSS guest workshop begins.
-                      </p>
-                    </div>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active show" id="day-1">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/intro.png" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">04:00pm to 04:30pm</h4>
+                    <h5>INTRODUCTION TO THE SPEAKERS</h5>
+                    <p style="width: 90%">
+                      All the dedicated speakers and honourable guest will be
+                      introduced before the HTML & CSS guest workshop begins.
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img
-                          class="media-object"
-                          src="img/html.png"
-                          alt="..."
-                        />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">04:30pm to 05:15pm</h4>
-                      <h5>BASICS OF HTML</h5>
-                      <p style="width: 100%">
-                        Most important and base of HTML - Header Tag, Paragraph
-                        Tag, Break Tag, Attributes tag, and Elements: Bold,
-                        Italic and Underline etc.
-                      </p>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/html.png" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">04:30pm to 05:15pm</h4>
+                    <h5>BASICS OF HTML</h5>
+                    <p style="width: 100%">
+                      Most important and base of HTML - Header Tag, Paragraph
+                      Tag, Break Tag, Attributes tag, and Elements: Bold,
+                      Italic and Underline etc.
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="media-object" src="img/CSS.jpg" alt="..." />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">05:15pm to 06:00pm</h4>
-                      <h5>BASICS OF CSS</h5>
-                      <p style="width: 100%">
-                        Most important and base of CSS -Just some random words
-                        Measurements,Colors, Background, Fonts, Text, Images,
-                        Margin and Padding, Borders, Links, Tables etc. Will be
-                        introduced to make your website attractive .
-                      </p>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/CSS.jpg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">05:15pm to 06:00pm</h4>
+                    <h5>BASICS OF CSS</h5>
+                    <p style="width: 100%">
+                      Most important and base of CSS -Just some random words
+                      Measurements,Colors, Background, Fonts, Text, Images,
+                      Margin and Padding, Borders, Links, Tables etc. Will be
+                      introduced to make your website attractive .
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="media-object" />
-                      </a>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" />
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="day-2">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img
-                          class="media-object"
-                          src="img/portfolio.jpg"
-                          alt="..."
-                        />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">04:00pm to 5:00pm</h4>
-                      <h5>WALKTHROUGH: HOW TO MAKE A PORTFOLIO</h5>
-                      <p style="width: 100%">
-                        From the previous knowledge of Day 1 of the workshop a
-                        complete walkthrough will be given of how to make your
-                        own portfolio from the scratch.
-                      </p>
-                    </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="day-2">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/portfolio.jpg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">04:00pm to 5:00pm</h4>
+                    <h5>WALKTHROUGH: HOW TO MAKE A PORTFOLIO</h5>
+                    <p style="width: 100%">
+                      From the previous knowledge of Day 1 of the workshop a
+                      complete walkthrough will be given of how to make your
+                      own portfolio from the scratch.
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="media-object" src="img/qna.jpg" alt="..." />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">05:00pm to 05:30pm</h4>
-                      <h5>QUIZZES AND QnA</h5>
-                      <p style="width: 100%">
-                        Interesting quizzes and polls will be held along with
-                        Live QnA and interaction with mentors and the core team
-                        members.
-                      </p>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/qna.jpg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">05:00pm to 05:30pm</h4>
+                    <h5>QUIZZES AND QnA</h5>
+                    <p style="width: 100%">
+                      Interesting quizzes and polls will be held along with
+                      Live QnA and interaction with mentors and the core team
+                      members.
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img
-                          class="media-object"
-                          src="img/conclusion.jpg"
-                          alt="..."
-                        />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">05:30pm to 06:00pm</h4>
-                      <h5>CONCLUSION OF THE Workshop</h5>
-                      <p style="width: 100%">
-                        Session will be concluded all the knowledge gained will
-                        be revised, tasks will be assigned and an official vote
-                        of thanks speech will be delivered.
-                      </p>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/conclusion.jpg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">05:30pm to 06:00pm</h4>
+                    <h5>CONCLUSION OF THE Workshop</h5>
+                    <p style="width: 100%">
+                      Session will be concluded all the knowledge gained will
+                      be revised, tasks will be assigned and an official vote
+                      of thanks speech will be delivered.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="day-3">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img
-                          class="media-object"
-                          src="img/portfolio.jpg"
-                          alt="..."
-                        />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">04:00pm to 5:00pm</h4>
-                      <h5>WALKTHROUGH: HOW TO MAKE A PORTFOLIO hi</h5>
-                      <p style="width: 100%">
-                        From the previous knowledge of Day 1 of the workshop a
-                        complete walkthrough will be given of how to make your
-                        own portfolio from the scratch.
-                      </p>
-                    </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="day-3">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/portfolio.jpg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">04:00pm to 5:00pm</h4>
+                    <h5>WALKTHROUGH: HOW TO MAKE A PORTFOLIO hi</h5>
+                    <p style="width: 100%">
+                      From the previous knowledge of Day 1 of the workshop a
+                      complete walkthrough will be given of how to make your
+                      own portfolio from the scratch.
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="media-object" src="img/qna.jpg" alt="..." />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">05:00pm to 05:30pm</h4>
-                      <h5>QUIZZES AND QnA</h5>
-                      <p style="width: 100%">
-                        Interesting quizzes and polls will be held along with
-                        Live QnA and interaction with mentors and the core team
-                        members.
-                      </p>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/qna.jpg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">05:00pm to 05:30pm</h4>
+                    <h5>QUIZZES AND QnA</h5>
+                    <p style="width: 100%">
+                      Interesting quizzes and polls will be held along with
+                      Live QnA and interaction with mentors and the core team
+                      members.
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img
-                          class="media-object"
-                          src="img/conclusion.jpg"
-                          alt="..."
-                        />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">05:30pm to 06:00pm</h4>
-                      <h5>CONCLUSION OF THE Workshop</h5>
-                      <p style="width: 100%">
-                        Session will be concluded all the knowledge gained will
-                        be revised, tasks will be assigned and an official vote
-                        of thanks speech will be delivered.
-                      </p>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/conclusion.jpg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">05:30pm to 06:00pm</h4>
+                    <h5>CONCLUSION OF THE Workshop</h5>
+                    <p style="width: 100%">
+                      Session will be concluded all the knowledge gained will
+                      be revised, tasks will be assigned and an official vote
+                      of thanks speech will be delivered.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="day-4">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img
-                          class="media-object"
-                          src="img/portfolio.jpg"
-                          alt="..."
-                        />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">04:00pm to 5:00pm</h4>
-                      <h5>WALKTHROUGH: HOW TO MAKE A PORTFOLIO</h5>
-                      <p style="width: 100%">
-                        From the previous knowledge of Day 1 of the workshop a
-                        complete walkthrough will be given of how to make your
-                        own portfolio from the scratch.
-                      </p>
-                    </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="day-4">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/portfolio.jpg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">04:00pm to 5:00pm</h4>
+                    <h5>WALKTHROUGH: HOW TO MAKE A PORTFOLIO</h5>
+                    <p style="width: 100%">
+                      From the previous knowledge of Day 1 of the workshop a
+                      complete walkthrough will be given of how to make your
+                      own portfolio from the scratch.
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="media-object" src="img/qna.jpg" alt="..." />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">05:00pm to 05:30pm</h4>
-                      <h5>QUIZZES AND QnA</h5>
-                      <p style="width: 100%">
-                        Interesting quizzes and polls will be held along with
-                        Live QnA and interaction with mentors and the core team
-                        members.
-                      </p>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/qna.jpg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">05:00pm to 05:30pm</h4>
+                    <h5>QUIZZES AND QnA</h5>
+                    <p style="width: 100%">
+                      Interesting quizzes and polls will be held along with
+                      Live QnA and interaction with mentors and the core team
+                      members.
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="media">
-                    <div class="media-left">
-                      <a href="#">
-                        <img
-                          class="media-object"
-                          src="img/conclusion.jpg"
-                          alt="..."
-                        />
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">05:30pm to 06:00pm</h4>
-                      <h5>CONCLUSION OF THE Workshop</h5>
-                      <p style="width: 100%">
-                        Session will be concluded all the knowledge gained will
-                        be revised, tasks will be assigned and an official vote
-                        of thanks speech will be delivered.
-                      </p>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="img/conclusion.jpg" alt="..." />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">05:30pm to 06:00pm</h4>
+                    <h5>CONCLUSION OF THE Workshop</h5>
+                    <p style="width: 100%">
+                      Session will be concluded all the knowledge gained will
+                      be revised, tasks will be assigned and an official vote
+                      of thanks speech will be delivered.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -581,25 +496,21 @@
         </div>
       </div>
     </div>
-    <!-- End: Schedule -->
+  </div>
+  <!-- End: Schedule -->
 
-    <script type="text/javascript" src="particles.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="particles.js"></script>
+  <script type="text/javascript" src="app.js"></script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
