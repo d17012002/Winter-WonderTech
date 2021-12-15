@@ -28,7 +28,87 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
+
   <body>
+    <style>
+      #snow {
+        background-color: rgba(0, 0, 0, 0.05);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: 1000;
+      }
+    </style>
+    <div id="snow"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+        script.onload = function () {
+          particlesJS("snow", {
+            "particles": {
+              "number": {
+                "value": 200,
+                "density": {
+                  "enable": true,
+                  "value_area": 600
+                }
+              },
+              "color": {
+                "value": "#fff"
+              },
+              "opacity": {
+                "value": 1,
+                "random": false,
+                "anim": {
+                  "enable": false
+                }
+              },
+              "size": {
+                "value": 4,
+                "random": true,
+                "anim": {
+                  "enable": false
+                }
+              },
+              "line_linked": {
+                "enable": false
+              },
+              "move": {
+                "enable": true,
+                "speed": 5,
+                "direction": "bottom",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                  "enable": true,
+                  "rotateX": 300,
+                  "rotateY": 1200
+                }
+              }
+            },
+            "interactivity": {
+              "events": {
+                "onhover": {
+                  "enable": false
+                },
+                "onclick": {
+                  "enable": false
+                },
+                "resize": false
+              }
+            },
+            "retina_detect": true
+          });
+        }
+        document.head.append(script);
+      });
+    </script>
     <!-- Header -->
     <header
       class="w3-container w3-center header-section cus-div"
@@ -502,6 +582,9 @@
       </div>
     </div>
     <!-- End: Schedule -->
+
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

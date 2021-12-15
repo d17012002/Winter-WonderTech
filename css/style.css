@@ -1,3 +1,8 @@
+#snow-fall{
+	width: 100%;
+	height: 99vh;
+	
+}
 .speaker-details{
 	padding-bottom: 10px;
 	width: 70%;
@@ -10,7 +15,7 @@
 .header-section{
 	height: 550px;
 	width: 100%;
-	background-image: url(https://thumbs.gfycat.com/AdoredWindingIberianbarbel-max-1mb.gif); 
+    background: rgb(22, 21, 21);
 	z-index: -1;
 	content: ' ';
 }
@@ -29,7 +34,7 @@
 	width: 100%;
 	height: 400px;
 	color: #f6f6f6;
-	background: #357cbe;
+	background: rgb(248, 41, 41);
 }
 #skew1:after{
 	transform-origin: right bottom;
