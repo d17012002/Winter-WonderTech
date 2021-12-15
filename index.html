@@ -17,8 +17,6 @@
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
-
 <body>
   <style>
     #snow {
@@ -32,7 +30,7 @@
       z-index: 1000;
     }
   </style>
-  <!-- <div id="snow"></div> -->
+  <div id="snow"></div>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var script = document.createElement('script');
@@ -100,7 +98,7 @@
     });
   </script>
   <!-- Header -->
-  <header class="w3-container w3-center header-section cus-div" id="skew1" style="padding: 100px 16px">
+  <header class="w3-container w3-center header-section" style="padding: 100px 16px">
     <class class="head-img">
       <img id="header-img" src="https://www.animatedimages.org/data/media/359/animated-santa-claus-image-0420.gif"
         alt="" />
@@ -113,13 +111,14 @@
       December
     </p>
     <br /><br />
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEIArlR7iRUM_W_p2RHUoCe_sECctfMC5IbK4PTd0GIJTwUA/viewform"><button
-        class="btn btn-lg btn-outline-light">Register Now!</button></a>
-  </header>
+    <a class="register-now" href="#"><button
+        class="btn btn-lg btn-outline-light">Register Now <i class="fas fa-holly-berry"></i></button></a>
+    </header>
+    <div class="w3-container slant-div1"></div>
 
   <!-- about -->
 
-  <div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-row-padding w3-padding-63  w3-container">
     <div class="w3-content">
       <div class="w3-twothird">
         <h2 class="row-title">
@@ -148,8 +147,9 @@
       </div>
     </div>
   </div>
-
+  
   <!-- Perks of the event -->
+  <div class="w3-container slant-div2"></div>
   <div class="w3-container perks"><br>
     <h2 id="schedule-heading" class="row-title text-center">
       Perks of the Event
@@ -158,14 +158,14 @@
     <div class="row me-row content-ct mx-auto">
       <br>
       <div class="col-md-6 col-sm-6 ">
-        <h3>Knowledge</h3>
+        <h3><i class="fas fa-gift fa-2x"></i></h3>
         <p>In a world driven by technology, creative and interactive websites are the doors
           through which one expresses their distinctive skills to the people of the world.
           It is only through the knowledge of HTML and CSS that one can achieve the peak of uniqueness
           in their websites.</p>
       </div>
       <div class="col-md-6 col-sm-6">
-        <h3>Fun & Entertaining</h3>
+        <h3><i class="fas fa-candy-cane fa-2x"></i></h3>
         <p>The event spanned over the weekend is packed with fun games, fascinating quizzes, and
           informative sessions. The “Bit By Bit” coding club brings a great learning experience for
           aspiring web developers as we unveil the HTML and CSS Workshop event.</p>
@@ -173,9 +173,10 @@
       </div>
     </div>
   </div>
+  <div class="w3-container slant-div3"></div>
 
   <!-- Start: Speakers -->
-  <div class="w3-container"><br><br>
+  <div class="w3-container ">
     <h2 id="schedule-heading" class="row-title text-center">
       About Speakers
     </h2>
@@ -218,7 +219,7 @@
   </div>
 
   <!-- Start: Schedule -->
-  <div class="container">
+  <div class="container"><br>
     <div class="row schedule" id="schedule">
       <h2 id="schedule-heading" class="row-title content-ct">
         Event Schedule
